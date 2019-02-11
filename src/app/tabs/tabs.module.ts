@@ -7,13 +7,21 @@ import { FormsModule } from '@angular/forms';
 import { TabsPageRoutingModule } from './tabs.router.module';
 
 import { TabsPage } from './tabs.page';
+import { TopNewsPageModule } from '../top-news/top-news.module';
+import { HeadlinesPageModule } from '../headlines/headlines.module';
+import { SettingsPageModule } from '../settings/settings.module';
+import { FavoritesPageModule } from '../favorites/favorites.module';
 
 @NgModule({
   imports: [
     IonicModule,
     CommonModule,
     FormsModule,
-    TabsPageRoutingModule
+    TabsPageRoutingModule,
+    TopNewsPageModule,
+    HeadlinesPageModule,
+    SettingsPageModule,
+    FavoritesPageModule
   ],
   declarations: [TabsPage]
 })

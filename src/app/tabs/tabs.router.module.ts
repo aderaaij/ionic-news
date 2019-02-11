@@ -8,50 +8,66 @@ const routes: Routes = [
     component: TabsPage,
     children: [
       {
-        path: 'tab1',
+        path: 'top-news',
         children: [
           {
             path: '',
-            loadChildren: '../tab1/tab1.module#Tab1PageModule'
+            loadChildren: '../top-news/top-news.module#TopNewsPageModule'
           }
         ]
       },
       {
-        path: 'tab2',
+        path: 'headlines',
         children: [
           {
             path: '',
-            loadChildren: '../tab2/tab2.module#Tab2PageModule'
+            loadChildren: '../headlines/headlines.module#HeadlinesPageModule'
           }
         ]
       },
       {
-        path: 'tab3',
+        path: 'sources',
         children: [
           {
             path: '',
-            loadChildren: '../tab3/tab3.module#Tab3PageModule'
+            loadChildren: '../sources/sources.module#SourcesPageModule'
+          }
+        ]
+      },
+      {
+        path: 'favorites',
+        children: [
+          {
+            path: '',
+            loadChildren: '../favorites/favorites.module#FavoritesPageModule'
+          }
+        ]
+      },
+      {
+        path: 'settings',
+        children: [
+          {
+            path: '',
+            loadChildren: '../settings/settings.module#SettingsPageModule'
           }
         ]
       },
       {
         path: '',
-        redirectTo: '/tabs/tab1',
+        redirectTo: '/tabs/top-news',
         pathMatch: 'full'
       }
     ]
   },
   {
     path: '',
-    redirectTo: '/tabs/tab1',
+    redirectTo: '/tabs/top-news',
     pathMatch: 'full'
   }
 ];
 
 @NgModule({
-  imports: [
-    RouterModule.forChild(routes)
-  ],
+  imports: [RouterModule.forChild(routes)],
   exports: [RouterModule]
 })
 export class TabsPageRoutingModule {}
