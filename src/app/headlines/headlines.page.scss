@@ -1,0 +1,26 @@
+.category {
+  margin-right: 10px;
+  min-width: 50px;
+}
+.label {
+  display: block;
+}
+.scroll-wrap {
+  width: 100%;
+  overflow: hidden;
+}
+div[scrollx='true'],
+div[scrolly='true'] {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+div[scrollx='true'] {
+  overflow-x: auto;
+}
+
+div[scrolly='true'] {
+  overflow-y: auto;
+}

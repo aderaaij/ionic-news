@@ -23,7 +23,9 @@ export class NewsService {
     this.showLoading();
     return this.http.get(`${apiUrl}/${url}`, { params }).pipe(
       tap(value => {
-        this.loading.dismiss();
+        if (this.loading) {
+          this.loading.dismiss();
+        }
       })
     );
   }
